@@ -1,20 +1,22 @@
 <form>
-<div class="form-group">
+  <div class="form-group">
     <label for="num">Dimmi un numero</label>
     <input name="num" #newnum>
   </div>
   <br>
   <div class="form-group">
-  <button  (click)="addNum(newnum)" >
-    Estrai
-  </button>
+    <button (click)="addNum(newnum)">
+      Estrai
+    </button>
   </div>
 </form>
 
 <app-cartella></app-cartella>
 
 <label>
-  <app-cartella [numero] = 'numeroEstratto' ></app-cartella>
+  <app-cartella [numero]='numeroEstratto'></app-cartella>
 </label>
 
-
+<label *ngFor="let number of numeri"> numeri estratti:
+  <app-cartella [numero]="numeri"></app-cartella>
+</label>
