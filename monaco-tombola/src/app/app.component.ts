@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'monaco-tombola';
+  numeroEstratto: number;
+  addNum(num: HTMLInputElement): boolean {
+    let number = Number(num.value);
+    this.numeroEstratto = number;
+    console.log(num.value);
+    return false;
+  }
 }
